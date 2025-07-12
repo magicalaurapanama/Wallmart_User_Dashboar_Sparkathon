@@ -1,0 +1,216 @@
+/* Custom CSS for enhanced dashboard aesthetics */
+
+/* Global improvements */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s ease;
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Dropdown styling */
+.Select-control {
+    border-radius: 8px !important;
+    border: 2px solid #e9ecef !important;
+    transition: all 0.3s ease;
+}
+
+.Select-control:hover {
+    border-color: #007bff !important;
+}
+
+/* Fix dropdown z-index issues */
+.Select-menu-outer {
+    z-index: 9999 !important;
+}
+
+.Select-menu {
+    z-index: 9999 !important;
+}
+
+/* Dash dropdown fix */
+.dash-dropdown .Select-menu-outer {
+    z-index: 9999 !important;
+}
+
+.dash-dropdown .Select-menu {
+    z-index: 9999 !important;
+}
+
+/* React-Select v3+ fixes */
+.css-26l3qy-menu {
+    z-index: 9999 !important;
+}
+
+.css-1n7v3ny-option {
+    z-index: 9999 !important;
+}
+
+/* Ensure all dropdown menus are above everything */
+div[data-dash-config] .Select-menu-outer,
+div[data-dash-config] .css-26l3qy-menu {
+    z-index: 9999 !important;
+    position: relative !important;
+}
+
+/* Fix for newer dash versions */
+.dropdown .Select-menu-outer {
+    z-index: 9999 !important;
+}
+
+/* Ensure cards don't interfere */
+.card {
+    z-index: 1 !important;
+    position: relative;
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 1;
+}
+
+/* Override any conflicting z-index */
+.row {
+    z-index: auto !important;
+}
+
+.col, .col-4, .col-6, .col-12 {
+    z-index: auto !important;
+}
+
+/* Button enhancements */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Tab styling */
+.nav-tabs .nav-link {
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+    border: none !important;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none !important;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 12px !important;
+    border: none !important;
+    font-weight: 500;
+}
+
+/* Plotly graph containers */
+.js-plotly-plot .plotly .svg-container {
+    border-radius: 8px;
+}
+
+/* Loading spinner */
+._dash-loading {
+    margin: 2rem auto !important;
+}
+
+/* Gradient backgrounds for specific elements */
+.gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+}
+
+.gradient-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%) !important;
+    border: none !important;
+}
+
+.gradient-info {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+    border: none !important;
+}
+
+.gradient-warning {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%) !important;
+    border: none !important;
+    color: #8b4513 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Animation for metric cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.metric-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Enhanced shadows */
+.shadow-lg {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
